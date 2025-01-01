@@ -10,16 +10,16 @@ def main():
 
     # Connect to the Neo4j graph database
     graph = Neo4jGraph(
-        url="bolt://localhost:7687",
-        username="neo4j",
-        password="fedi1919"
+        url="YOUR_URL",
+        username="YOUR_USERNAME",
+        password="YOUR_PASSWORD"
     )
     print("Connected to the Neo4j database.")
     print("Graph Schema:", graph.schema)
     schema = graph.schema
 
     # Set up the Generative AI model and the LangChain
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro",google_api_key="AIzaSyDezNfI535Kvv0TSDvZ_6PfF8yJF4sjM5A")
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro",google_api_key="YOUR_API_KEY")
     if not llm:
         print("Model could not be loaded. Check the model name or your API key.")
         return
