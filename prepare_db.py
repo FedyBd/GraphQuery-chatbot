@@ -1,6 +1,10 @@
 from langchain_community.graphs import Neo4jGraph
 
-graph = Neo4jGraph("bolt://localhost:7687","neo4j","fedi1919")
+graph = Neo4jGraph(
+        url="YOUR_URL",
+        username="YOUR_USERNAME",
+        password="YOUR_PASSWORD"
+    )
 print("connected to db")
 
 # Import movie information
